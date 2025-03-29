@@ -13,6 +13,14 @@ builder.Services.Configure<MongoDbSettings>(
     builder.Configuration.GetSection("MongoDB"));
 builder.Services.AddSingleton<BookingService>();
 builder.Services.AddSingleton<EmailService>();
+builder.Services.Configure<SmtpSettings>(builder.Configuration.GetSection("SmtpSettings"));
+
+builder.Services.Configure<MongoDbSettings>(builder.Configuration.GetSection("MongoDbSettings"));
+builder.Services.AddSingleton<CarService>();
+
+
+// Register EmailService
+builder.Services.AddSingleton<EmailService>();
 
 var app = builder.Build();
 

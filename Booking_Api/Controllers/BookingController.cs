@@ -71,7 +71,7 @@ namespace Booking_Api.Controllers
 
             await _emailService.SendEmailAsync("ritikraj1092002@gmail.com", subject, body); // Sending email
 
-            return CreatedAtAction(nameof(GetById), new { id = createdBooking.Id }, createdBooking);
+            return Ok();
         }
 
 
