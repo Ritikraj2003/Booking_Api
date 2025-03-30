@@ -3,7 +3,7 @@ using MongoDB.Bson.Serialization.Attributes;
 
 namespace Booking_Api.Models
 {
-    public class Booking
+    public class Contacts
     {
         [BsonId]
         [BsonRepresentation(BsonType.ObjectId)]
