@@ -88,7 +88,7 @@ namespace Booking_Api.Controllers
             if (!updated)
                 return BadRequest("Update failed");
 
-            return NoContent();
+            return Ok(updated);
         }
 
         // Delete Booking

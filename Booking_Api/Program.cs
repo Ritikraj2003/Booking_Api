@@ -19,6 +19,7 @@ builder.Services.Configure<MongoDbSettings>(builder.Configuration.GetSection("Mo
 builder.Services.AddSingleton<CarService>();
 // Register EmailService
 builder.Services.AddSingleton<EmailService>();
+builder.Services.AddSingleton<BookingService>();
 
 builder.Services.AddCors(options =>
 {

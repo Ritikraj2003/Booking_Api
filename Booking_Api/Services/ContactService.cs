@@ -34,7 +34,7 @@ namespace Booking_Api.Services
         public async Task<bool> UpdateAsync(string id, Contacts updatedcontact)
         {
             var result = await _Contactss.ReplaceOneAsync(b => b.Id == id, updatedcontact);
-            return result.ModifiedCount > 0;
+            return true;
         }
 
         // Delete Booking
